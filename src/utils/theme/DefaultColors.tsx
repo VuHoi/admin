@@ -1,88 +1,60 @@
 import { createTheme } from "@mui/material/styles";
-import { Plus_Jakarta_Sans } from "next/font/google";
+import { themeConfig } from "./theme.config";
 
-export const plus = Plus_Jakarta_Sans({
-  weight: ["300", "400", "500", "600", "700"],
-  subsets: ["latin"],
-  display: "swap",
-  fallback: ["Helvetica", "Arial", "sans-serif"],
-});
-
-const baselightTheme = createTheme({
-  direction: "ltr",
+export const theme = createTheme({
   palette: {
     primary: {
-      main: "#5D87FF",
-      light: "#ECF2FF",
-      dark: "#4570EA",
+      main: themeConfig.colors.primary.main,
+      light: themeConfig.colors.primary.light,
+      dark: themeConfig.colors.primary.dark,
     },
     secondary: {
-      main: "#49BEFF",
-      light: "#E8F7FF",
-      dark: "#23afdb",
+      main: themeConfig.colors.secondary.main,
+      light: themeConfig.colors.secondary.light,
+      dark: themeConfig.colors.secondary.dark,
     },
     success: {
-      main: "#13DEB9",
-      light: "#E6FFFA",
-      dark: "#02b3a9",
-      contrastText: "#ffffff",
+      main: themeConfig.colors.success.main,
+      light: themeConfig.colors.success.light,
+      dark: themeConfig.colors.success.dark,
     },
     info: {
-      main: "#539BFF",
-      light: "#EBF3FE",
-      dark: "#1682d4",
-      contrastText: "#ffffff",
+      main: themeConfig.colors.info.main,
+      light: themeConfig.colors.info.light,
+      dark: themeConfig.colors.info.dark,
     },
     error: {
-      main: "#FA896B",
-      light: "#FDEDE8",
-      dark: "#f3704d",
-      contrastText: "#ffffff",
+      main: themeConfig.colors.error.main,
+      light: themeConfig.colors.error.light,
+      dark: themeConfig.colors.error.dark,
     },
     warning: {
-      main: "#FFAE1F",
-      light: "#FEF5E5",
-      dark: "#ae8e59",
-      contrastText: "#ffffff",
+      main: themeConfig.colors.warning.main,
+      light: themeConfig.colors.warning.light,
+      dark: themeConfig.colors.warning.dark,
     },
-    grey: {
-      100: "#F2F6FA",
-      200: "#EAEFF4",
-      300: "#DFE5EF",
-      400: "#7C8FAC",
-      500: "#5A6A85",
-      600: "#2A3547",
-    },
+    grey: themeConfig.colors.grey,
     text: {
-      primary: "#2A3547",
-      secondary: "#5A6A85",
+      primary: themeConfig.colors.text.primary,
+      secondary: themeConfig.colors.text.secondary,
     },
-    action: {
-      disabledBackground: "rgba(73,82,88,0.12)",
-      hoverOpacity: 0.02,
-      hover: "#f6f9fc",
-    },
-    divider: "#e5eaef",
   },
   typography: {
-    fontFamily: plus.style.fontFamily,
+    fontFamily: themeConfig.fontFamily.sans,
     h1: {
       fontWeight: 600,
       fontSize: "2.25rem",
       lineHeight: "2.75rem",
-      fontFamily: plus.style.fontFamily,
     },
     h2: {
       fontWeight: 600,
       fontSize: "1.875rem",
       lineHeight: "2.25rem",
-      fontFamily: plus.style.fontFamily,
     },
     h3: {
       fontWeight: 600,
       fontSize: "1.5rem",
       lineHeight: "1.75rem",
-      fontFamily: plus.style.fontFamily,
     },
     h4: {
       fontWeight: 600,
@@ -126,20 +98,46 @@ const baselightTheme = createTheme({
   components: {
     MuiCssBaseline: {
       styleOverrides: {
-        ".MuiPaper-elevation9, .MuiPopover-root .MuiPaper-elevation": {
-          boxShadow:
-            "rgb(145 158 171 / 30%) 0px 0px 2px 0px, rgb(145 158 171 / 12%) 0px 12px 24px -4px !important",
+        "*": {
+          boxSizing: "border-box",
+        },
+        html: {
+          height: "100%",
+          width: "100%",
+        },
+        body: {
+          height: "100%",
+          margin: 0,
+          padding: 0,
+        },
+        "#root": {
+          height: "100%",
+        },
+        "*[dir='rtl'] .buyNowImg": {
+          transform: "scaleX(-1)",
+        },
+        ".border-none td": {
+          border: "0px",
+        },
+        a: {
+          textDecoration: "none",
+        },
+        ".dzu-dropzone": {
+          overflow: "hidden !important",
+        },
+        ".dzu-inputLabel": {
+          color: "#1e88e5 !important",
         },
       },
     },
     MuiCard: {
       styleOverrides: {
         root: {
-          borderRadius: "7px",
+          borderRadius: themeConfig.borderRadius.lg,
+          padding: themeConfig.spacing.md,
+          margin: themeConfig.spacing.sm,
         },
       },
     },
   },
 });
-
-export { baselightTheme };

@@ -1,3 +1,5 @@
+const { themeConfig } = require("./src/utils/theme/theme.config");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -5,7 +7,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
-  // important: true, // to work with MUI
+  // important: true,
   theme: {
     container: {
       center: true,
@@ -16,26 +18,23 @@ module.exports = {
     },
     extend: {
       colors: {
-        primary: {
-          light: "#8794dd",
-          main: "#dadada",
-          dark: "#3f51b5",
-          contrast: "#fff",
-        },
-        secondary: {
-          light: "#33a095",
-          main: "#19857b",
-          dark: "#115d56",
-          contrast: "#fff",
-        },
+        primary: themeConfig.colors.primary,
+        secondary: themeConfig.colors.secondary,
+        success: themeConfig.colors.success,
+        info: themeConfig.colors.info,
+        warning: themeConfig.colors.warning,
+        error: themeConfig.colors.error,
+        grey: themeConfig.colors.grey,
       },
+      spacing: themeConfig.spacing,
+      borderRadius: themeConfig.borderRadius,
       fontFamily: {
-        sans: ["var(--font-sans)", "system-ui"],
+        sans: themeConfig.fontFamily.sans,
       },
       keyframes: {
         "fade-in": {
-          "0%": { opacity: 0, width: "0px" },
-          "100%": { opacity: 1, width: "270px" },
+          "0%": { opacity: "0", width: "0px" },
+          "100%": { opacity: "1", width: "270px" },
         },
       },
       animation: {
@@ -43,8 +42,8 @@ module.exports = {
       },
     },
   },
-  plugins: [],
   corePlugins: {
     preflight: false,
   },
+  plugins: [],
 };

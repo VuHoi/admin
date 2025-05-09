@@ -14,7 +14,7 @@ import MonthlyEarnings from "@/app/(DashboardLayout)/components/dashboard/Monthl
 const Dashboard = () => {
   return (
     <PageContainer title="Dashboard" description="this is Dashboard">
-      <div className=" bg-primary-main h-[100px] animate-accordion-down rounded-full w-[100px] flex items-center justify-center uppercase font-bold text-white mb-2">
+      <div className=" bg-primary-dark h-[100px] animate-accordion-down rounded-full w-[100px] flex items-center justify-center uppercase font-bold text-white mb-2">
         Hoi
       </div>
       <Box>
