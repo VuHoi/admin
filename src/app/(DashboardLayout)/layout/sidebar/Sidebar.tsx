@@ -2,6 +2,7 @@ import { useMediaQuery, Box, Drawer } from "@mui/material";
 import SidebarItems from "./SidebarItems";
 import { Upgrade } from "./Updrade";
 import Image from "next/image";
+import { isNil } from "lodash";
 
 interface ItemType {
   isMobileSidebarOpen: boolean;
@@ -14,7 +15,9 @@ const MSidebar = ({
   onSidebarClose,
   isSidebarOpen,
 }: ItemType) => {
-  const lgUp = useMediaQuery((theme: any) => theme.breakpoints.up("lg"));
+  const lgUp = useMediaQuery((theme: any) => theme.breakpoints.up("lg"), {
+    defaultMatches: null as any,
+  });
   const sidebarWidth = "270px";
 
   // Custom CSS for short scrollbar
@@ -35,6 +38,7 @@ const MSidebar = ({
           width: sidebarWidth,
           flexShrink: 0,
         }}
+        className="animate-fade-in"
       >
         <Drawer
           anchor="left"
