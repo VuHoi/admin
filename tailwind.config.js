@@ -40,6 +40,9 @@ module.exports = {
       animation: {
         "fade-in": "fade-in 0.5s ease-out forwards",
       },
+      boxShadow: {
+        button: "0px 4px 15px 0px rgba(0, 0, 0, 0.12)",
+      },
     },
   },
   corePlugins: {

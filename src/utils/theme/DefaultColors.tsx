@@ -1,12 +1,13 @@
 import { createTheme } from "@mui/material/styles";
 import { themeConfig } from "./theme.config";
 
-export const theme = createTheme({
+export const theme = (createTheme as any)({
   palette: {
     primary: {
       main: themeConfig.colors.primary.main,
       light: themeConfig.colors.primary.light,
       dark: themeConfig.colors.primary.dark,
+      contrastText: themeConfig.colors.primary.contrastText,
     },
     secondary: {
       main: themeConfig.colors.secondary.main,
@@ -37,6 +38,11 @@ export const theme = createTheme({
     text: {
       primary: themeConfig.colors.text.primary,
       secondary: themeConfig.colors.text.secondary,
+    },
+    custom: {
+      main: themeConfig.colors.error.main,
+      light: themeConfig.colors.error.light,
+      dark: themeConfig.colors.error.dark,
     },
   },
   typography: {

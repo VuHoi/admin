@@ -4,14 +4,16 @@ export const themeConfig = {
   },
   colors: {
     primary: {
-      main: "#5D87FF",
-      light: "#ECF2FF",
-      dark: "#4570EA",
+      main: "#FF8B00",
+      light: "#FFFFFF",
+      dark: "#F18705FF",
+      contrastText: "#FFFFFF",
     },
     secondary: {
-      main: "#49BEFF",
-      light: "#E8F7FF",
-      dark: "#23afdb",
+      main: "#007DC6",
+      light: "#FFFFFF",
+      dark: "#016BA8FF",
+      contrastText: "#FFFFFF",
     },
     success: {
       main: "#13DEB9",
