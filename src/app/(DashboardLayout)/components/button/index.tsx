@@ -7,9 +7,9 @@ const shapes = {
 } as const;
 
 const sizes = {
-  lg: "h-[60px] px-1.5",
-  sm: "h-[42px]",
-  md: "h-[50px] px-1.5",
+  lg: "h-[60px] px-1.5 !text-base",
+  sm: "h-[38px] !text-base",
+  md: "h-[50px] px-1.5 !text-base",
 } as const;
 
 type ButtonProps = Omit<
@@ -46,12 +46,14 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
       variant={variant}
       color={color as any}
       classes={{
-        root: `${className} flex flex-row items-center !shadow-button  justify-center text-center cursor-pointer whitespace-nowrap ${
+        root: `${className} flex gap-2 flex-row items-center !shadow-button  justify-center text-center cursor-pointer whitespace-nowrap ${
           shape && shapes[shape]
         } ${size && sizes[size]} `,
       }}
     >
+      {leftIcon && <span className="text-xl mt-1">{leftIcon}</span>}
       {children}
+      {rightIcon && <span className="text-xl mt-1">{rightIcon}</span>}
     </ButtonMui>
   );
 };

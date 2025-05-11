@@ -10,25 +10,28 @@ export const themeConfig = {
       contrastText: "#FFFFFF",
     },
     secondary: {
+      main: "#000000",
+      light: "#EBF3FE",
+      dark: "#000000",
+      contrastText: "#FFFFFF",
+    },
+    success: {
+      main: "#19981E",
+      light: "#E6FFFA",
+      dark: "#147718FF",
+      contrastText: "#FFFFFF",
+    },
+    info: {
       main: "#007DC6",
       light: "#FFFFFF",
       dark: "#016BA8FF",
       contrastText: "#FFFFFF",
     },
-    success: {
-      main: "#13DEB9",
-      light: "#E6FFFA",
-      dark: "#02b3a9",
-    },
-    info: {
-      main: "#539BFF",
-      light: "#EBF3FE",
-      dark: "#1682d4",
-    },
     error: {
-      main: "#FA896B",
+      main: "#FF3B30",
       light: "#FDEDE8",
-      dark: "#f3704d",
+      dark: "#E4342BFF",
+      contrastText: "#FFFFFF",
     },
     warning: {
       main: "#FFAE1F",
