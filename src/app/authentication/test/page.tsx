@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@/app/(DashboardLayout)/components/button";
+import { Button } from "@/app/(DashboardLayout)/components/base/button";
 const TestPage = () => {
   return (
     <div>

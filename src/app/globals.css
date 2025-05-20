@@ -5,9 +5,7 @@
 :root {
   --max-width: 1200px;
   --border-radius: 12px;
-  --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
-    'Roboto Mono', 'Oxygen Mono', 'Ubuntu Monospace', 'Source Code Pro',
-    'Fira Mono', 'Droid Sans Mono', 'Courier New', monospace;
+  --font-mono: "Inter", sans-serif;
 }
 
 * {
@@ -27,6 +25,7 @@ body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
   min-height: 100vh;
+  font-family: var(--font-mono) !important;
 }
 
 a {
@@ -55,3 +54,4 @@ a {
 ::-webkit-scrollbar-thumb:hover {
   background: #d0d5dd;
 } 
+

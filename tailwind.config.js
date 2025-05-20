@@ -17,19 +17,30 @@ module.exports = {
       },
     },
     extend: {
+      fontFamily: {
+        inter: ["Inter", "sans-serif"],
+      },
       colors: {
-        primary: themeConfig.colors.primary,
-        secondary: themeConfig.colors.secondary,
-        success: themeConfig.colors.success,
-        info: themeConfig.colors.info,
-        warning: themeConfig.colors.warning,
-        error: themeConfig.colors.error,
-        grey: themeConfig.colors.grey,
+        primary: themeConfig.colors.primary.main,
+        secondary: themeConfig.colors.secondary.main,
+        success: themeConfig.colors.success.main,
+        info: themeConfig.colors.info.main,
+        warning: themeConfig.colors.warning.main,
+        error: themeConfig.colors.error.main,
+        border: themeConfig.colors.border,
+        "neutral-600": themeConfig.colors.grey[600],
+        "neutral-500": themeConfig.colors.grey[500],
+        "neutral-400": themeConfig.colors.grey[400],
+        "neutral-300": themeConfig.colors.grey[300],
+        "neutral-200": themeConfig.colors.grey[200],
+        "neutral-100": themeConfig.colors.grey[100],
       },
       spacing: themeConfig.spacing,
+      fontSize: themeConfig.fontSize,
       borderRadius: themeConfig.borderRadius,
       fontFamily: {
         sans: themeConfig.fontFamily.sans,
+        dmSans: themeConfig.fontFamily.dmSans,
       },
       keyframes: {
         "fade-in": {
