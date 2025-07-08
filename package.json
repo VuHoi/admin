@@ -33,6 +33,11 @@
     "typescript": "5.8.3"
   },
   "devDependencies": {
-    "@types/lodash": "4.17.16"
-  }
+    "@tailwindcss/postcss": "^4.1.6",
+    "@types/lodash": "4.17.16",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.3",
+    "tailwindcss": "^4.1.6"
+  },
+  "packageManager": "yarn@1.22.22+sha256.c17d3797fb9a9115bf375e31bfd30058cac6bc9c3b8807a3d8cb2094794b51ca"
 }
