@@ -80,6 +80,14 @@
             "assets": ["packages/vendor/*.md"]
           }
         },
+        "serve": {
+          "executor": "@nx/next:server",
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "vendor:build",
+            "dev": true
+          }
+        },
         "test": {
           "executor": "@nx/jest:jest",
           "outputs": ["{workspaceRoot}/coverage/packages/vendor"],
@@ -94,6 +102,32 @@
         }
       },
       "tags": ["vendor", "library"]
+    },
+    "system-design": {
+      "root": "packages/system-design",
+      "sourceRoot": "packages/system-design/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nx/js:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/system-design",
+            "main": "packages/system-design/src/index.ts",
+            "tsConfig": "packages/system-design/tsconfig.json",
+            "assets": ["packages/system-design/*.md"]
+          }
+        },
+        "serve": {
+          "executor": "@nx/next:server",
+          "defaultConfiguration": "development",
+          "options": {
+            "buildTarget": "system-design:build",
+            "dev": true
+          }
+        }
+      },
+      "tags": ["system-design", "library"]
     }
   }
 } 

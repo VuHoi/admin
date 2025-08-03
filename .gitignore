@@ -48,3 +48,4 @@ next-env.d.ts
 /dist
 
 /.yarn/cache
+packages/system-design/node_modules/*
