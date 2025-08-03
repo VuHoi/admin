@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/rules-of-hooks */
 import type { StoryObj } from "@storybook/react";
 import { Input } from "./input";
 import { EyeIcon } from "../icons/eye";

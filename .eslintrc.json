@@ -1,6 +1,22 @@
 {
   "extends": [
-    "next/core-web-vitals",
-    "plugin:storybook/recommended"
+    "next/core-web-vitals"
+  ],
+  "plugins": ["@nx"],
+  "rules": {
+    "@nx/enforce-module-boundaries": "off"
+  },
+  "overrides": [
+    {
+      "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
+      "rules": {
+        "@nx/enforce-module-boundaries": "off"
+      }
+    },
+    {
+      "files": ["*.json"],
+      "parser": "jsonc-eslint-parser",
+      "rules": {}
+    }
   ]
 }
