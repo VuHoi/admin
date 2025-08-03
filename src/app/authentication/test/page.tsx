@@ -1,9 +1,9 @@
 import React from "react";
-import { Button } from "@/app/(DashboardLayout)/components/base/button";
+import { Button } from "@admin/system-design";
 const TestPage = () => {
   return (
     <div>
-      <Button variant="contained" color="primary">
+      <Button variant="outlined" color="primary">
         CLICK ME
       </Button>
     </div>
