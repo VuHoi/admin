@@ -2,9 +2,9 @@ import type { StorybookConfig } from "@storybook/experimental-nextjs-vite";
 
 const config: StorybookConfig = {
   stories: [
-    "../src/**/*.mdx",
-    "../src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
-    "../src/app/**/**/**/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../packages/super-admin/src/**/*.mdx",
+    "../packages/super-admin/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
+    "../packages/super-admin/src/app/**/**/**/**/*.stories.@(js|jsx|mjs|ts|tsx)",
     "../packages/system-design/src/**/*.stories.@(js|jsx|mjs|ts|tsx)",
   ],
   addons: [
@@ -17,6 +17,6 @@ const config: StorybookConfig = {
     name: "@storybook/experimental-nextjs-vite",
     options: {},
   },
-  staticDirs: ["../public"],
+  staticDirs: ["../packages/super-admin/public"],
 };
 export default config;

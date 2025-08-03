@@ -1,8 +1,8 @@
-import "../src/app/globals.css";
+import "../packages/super-admin/src/app/globals.css";
 import React from "react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import { theme } from "../src/utils/theme/DefaultColors";
-import "../src/app/globals.css";
+import { theme } from "../packages/super-admin/src/utils/theme/DefaultColors";
+import "../packages/super-admin/src/app/globals.css";
 
 import type { Preview } from "@storybook/react";
 

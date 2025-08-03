@@ -7,6 +7,7 @@ module.exports = {
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./packages/system-design/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./packages/super-admin/src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   // important: true,
   theme: {

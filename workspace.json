@@ -1,9 +1,9 @@
 {
   "version": 2,
   "projects": {
-    "admin": {
-      "root": ".",
-      "sourceRoot": "src",
+    "super-admin": {
+      "root": "packages/super-admin",
+      "sourceRoot": "packages/super-admin/src",
       "projectType": "application",
       "targets": {
         "build": {
@@ -11,11 +11,11 @@
           "outputs": ["{options.outputPath}"],
           "defaultConfiguration": "production",
           "options": {
-            "outputPath": "dist/admin"
+            "outputPath": "dist/super-admin"
           },
           "configurations": {
             "development": {
-              "outputPath": "dist/admin"
+              "outputPath": "dist/super-admin"
             },
             "production": {}
           }
@@ -24,16 +24,16 @@
           "executor": "@nx/next:server",
           "defaultConfiguration": "development",
           "options": {
-            "buildTarget": "admin:build",
+            "buildTarget": "super-admin:build",
             "dev": true
           },
           "configurations": {
             "development": {
-              "buildTarget": "admin:build:development",
+              "buildTarget": "super-admin:build:development",
               "dev": true
             },
             "production": {
-              "buildTarget": "admin:build:production",
+              "buildTarget": "super-admin:build:production",
               "dev": false
             }
           }
@@ -41,12 +41,12 @@
         "export": {
           "executor": "@nx/next:export",
           "options": {
-            "buildTarget": "admin:build:production"
+            "buildTarget": "super-admin:build:production"
           }
         },
         "test": {
           "executor": "@nx/jest:jest",
-          "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+          "outputs": ["{workspaceRoot}/coverage/super-admin"],
           "options": {
             "jestConfig": "jest.config.ts",
             "passWithNoTests": true
@@ -63,7 +63,37 @@
           "outputs": ["{options.outputFile}"]
         }
       },
-      "tags": []
+      "tags": ["super-admin", "frontend", "application"]
+    },
+    "vendor": {
+      "root": "packages/vendor",
+      "sourceRoot": "packages/vendor/src",
+      "projectType": "library",
+      "targets": {
+        "build": {
+          "executor": "@nx/js:tsc",
+          "outputs": ["{options.outputPath}"],
+          "options": {
+            "outputPath": "dist/packages/vendor",
+            "main": "packages/vendor/src/index.ts",
+            "tsConfig": "packages/vendor/tsconfig.json",
+            "assets": ["packages/vendor/*.md"]
+          }
+        },
+        "test": {
+          "executor": "@nx/jest:jest",
+          "outputs": ["{workspaceRoot}/coverage/packages/vendor"],
+          "options": {
+            "jestConfig": "packages/vendor/jest.config.ts",
+            "passWithNoTests": true
+          }
+        },
+        "lint": {
+          "executor": "@nx/eslint:lint",
+          "outputs": ["{options.outputFile}"]
+        }
+      },
+      "tags": ["vendor", "library"]
     }
   }
 } 

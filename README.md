@@ -1,34 +1,146 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# BashBag Admin Monorepo
 
-## Getting Started
+A modern monorepo built with Yarn 2 workspaces and Nx for managing multiple applications and packages.
 
-First, run the development server:
+## 🏗️ Project Structure
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
+```
+admin/
+├── packages/
+│   ├── super-admin/          # Next.js admin dashboard
+│   └── system-design/        # Shared component library
+├── .yarn/                    # Yarn 2 files
+├── .nx/                      # Nx cache
+├── dist/                     # Build outputs
+└── node_modules/             # Dependencies
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 📦 Packages
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+### **@bashbag/super-admin**
+- **Type**: Next.js Application
+- **Description**: Admin dashboard with Material-UI and Tailwind CSS
+- **Location**: `packages/super-admin/`
+- **Tech Stack**: Next.js 15, Material-UI 7, TypeScript, Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+### **@bashbag/system-design**
+- **Type**: React Component Library
+- **Description**: Shared UI components and design system
+- **Location**: `packages/system-design/`
+- **Tech Stack**: React, Material-UI, TypeScript, Jest
 
-## Learn More
+## 🚀 Getting Started
 
-To learn more about Next.js, take a look at the following resources:
+### Prerequisites
+- Node.js 18+
+- Yarn 2 (Berry)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Installation
+```bash
+# Install dependencies
+yarn install
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+# Start development server
+yarn dev
+# or
+npx nx serve super-admin
 
-## Deploy on Vercel
+# Build all packages
+yarn build
+# or
+npx nx build super-admin
+```
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🛠️ Available Commands
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+### Development
+```bash
+# Start super-admin development server
+yarn dev
+npx nx serve super-admin
+
+# Start system-design development
+cd packages/system-design && yarn dev
+```
+
+### Building
+```bash
+# Build super-admin
+yarn build
+npx nx build super-admin
+
+# Build system-design
+npx nx build @bashbag/system-design
+```
+
+### Testing
+```bash
+# Test super-admin
+yarn test
+npx nx test super-admin
+
+# Test system-design
+npx nx test @bashbag/system-design
+
+# Test all packages
+npx nx run-many --target=test --all
+```
+
+### Linting
+```bash
+# Lint super-admin
+yarn lint
+npx nx lint super-admin
+
+# Lint all packages
+npx nx run-many --target=lint --all
+```
+
+## 📋 Project Management
+
+### List Projects
+```bash
+npx nx show projects
+```
+
+### Run Multiple Targets
+```bash
+# Build all projects
+npx nx run-many --target=build --all
+
+# Test all projects
+npx nx run-many --target=test --all
+```
+
+## 🏛️ Architecture
+
+- **Yarn 2 Workspaces**: Package management and linking
+- **Nx**: Build orchestration and caching
+- **TypeScript**: Type safety across all packages
+- **Jest**: Testing framework
+- **ESLint**: Code linting
+- **Storybook**: Component documentation
+
+## 📁 Key Files
+
+- `package.json`: Root dependencies and scripts
+- `workspace.json`: Nx project definitions
+- `nx.json`: Nx workspace configuration
+- `.yarnrc.yml`: Yarn 2 configuration
+- `tailwind.config.js`: Global Tailwind configuration
+
+## 🔧 Development
+
+This monorepo uses:
+- **Yarn 2 (Berry)** for package management
+- **Nx** for build orchestration and caching
+- **TypeScript** for type safety
+- **Jest** for testing
+- **ESLint** for code quality
+
+## 📚 Documentation
+
+- [Super Admin README](packages/super-admin/README.md)
+- [System Design README](packages/system-design/README.md)
+- [Nx Documentation](https://nx.dev/)
+- [Yarn 2 Documentation](https://yarnpkg.com/)
