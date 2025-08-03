@@ -8,14 +8,16 @@
       "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
-                "options": {
-            "outputPath": "dist/super-admin"
-          },
-          "configurations": {
-            "development": {
-              "outputPath": "dist/super-admin"
-            },
-        "production": {}
+      "options": {
+        "outputPath": "dist/super-admin"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": "dist/super-admin"
+        },
+        "production": {
+          "outputPath": "dist/super-admin"
+        }
       }
     },
     "serve": {

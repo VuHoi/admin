@@ -5,7 +5,7 @@
   "scripts": {
     "dev": "nx serve",
     "build": "nx build super-admin",
-    "start": "nx serve super-admin --prod",
+    "start": "nx serve super-admin",
     "lint": "nx lint super-admin",
     "test": "nx test super-admin"
   },

@@ -3,11 +3,9 @@ const { themeConfig } = require("./packages/system-design/src/utils/theme/theme.
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
     "./packages/system-design/src/**/*.{js,ts,jsx,tsx,mdx}",
     "./packages/super-admin/src/**/*.{js,ts,jsx,tsx,mdx}",
+    "./packages/vendor/src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   // important: true,
   theme: {
