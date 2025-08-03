@@ -1,5 +1,5 @@
 {
-  "name": "@admin/system-design",
+  "name": "@bashbag/system-design",
   "version": "1.0.0",
   "description": "System design components for admin dashboard",
   "main": "dist/index.js",
@@ -14,10 +14,13 @@
     "lint": "eslint src --ext .ts,.tsx"
   },
   "dependencies": {
+    "@hookform/resolvers": "^5.2.1",
     "@mui/icons-material": "7.1.0",
     "@mui/material": "7.1.0",
     "react": "19.1.0",
-    "react-dom": "19.1.0"
+    "react-dom": "19.1.0",
+    "react-hook-form": "^7.56.4",
+    "zod": "^4.0.14"
   },
   "devDependencies": {
     "@testing-library/jest-dom": "6.6.4",

@@ -12,7 +12,7 @@
     "build-storybook": "storybook build"
   },
   "dependencies": {
-    "@admin/system-design": "workspace:*",
+    "@bashbag/system-design": "workspace:*",
     "@emotion/cache": "11.14.0",
     "@emotion/react": "11.14.0",
     "@emotion/server": "11.11.0",

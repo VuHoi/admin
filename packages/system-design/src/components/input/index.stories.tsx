@@ -6,7 +6,7 @@ import { EmailOutlined } from "@mui/icons-material";
 import { Password } from "./password";
 import { InputFormControl as InputFormControlComponent } from "./inputFormControl";
 import { PasswordFormControl as PasswordFormControlComponent } from "./passwordFormControl";
-import { FormProvider, useForm } from "react-hook-form";
+import { FormProvider, useForm, UseFormReturn } from "react-hook-form";
 import { Button } from "../button";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { z } from "zod";
@@ -106,12 +106,17 @@ export const PasswordInput: Story = {
 
 export const InputFormControl: Story = {
   render: (args) => {
-    const form = useForm();
+    const form = useForm({
+      defaultValues: {
+        email: "",
+      },
+    });
     return (
       <div className="flex gap-4 w-[300px] ">
         <FormProvider {...form}>
           <InputFormControlComponent
             name="email"
+            form={form as any}
             label="Email"
             leftIcon={<EmailOutlined sx={{ color: "#A1A1A1" }} />}
             placeholder="Enter your email"
@@ -125,12 +130,19 @@ export const InputFormControl: Story = {
 
 export const PasswordFormControl: Story = {
   render: (args) => {
-    const form = useForm();
+    const form = useForm({
+      defaultValues: {
+        password: "",
+      },
+      mode: "onChange",
+      resolver: zodResolver(schema),
+    });
     return (
       <div className="flex gap-4 w-[300px] ">
         <FormProvider {...form}>
           <PasswordFormControlComponent
             name="password"
+            form={form as any}
             label="Password"
             {...args}
           />
@@ -154,9 +166,8 @@ export const ValidationForm: Story = {
       console.log(data);
     };
 
-    console.log(form.formState.errors);
     return (
-      <div className="flex gap-4 w-[300px] ">
+      <div className="flex gap-4 w-[300px] items-center">
         <FormProvider {...form}>
           <form
             onSubmit={form.handleSubmit(onSubmit)}
@@ -164,12 +175,14 @@ export const ValidationForm: Story = {
           >
             <InputFormControlComponent
               name="email"
+              form={form}
               label="Email"
               placeholder="Enter your email"
             />
 
             <PasswordFormControlComponent
               name="password"
+              form={form}
               label="Password"
               placeholder="Enter your password"
             />

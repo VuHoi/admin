@@ -6,6 +6,7 @@ module.exports = {
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./packages/system-design/src/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   // important: true,
   theme: {
@@ -17,9 +18,6 @@ module.exports = {
       },
     },
     extend: {
-      fontFamily: {
-        inter: ["Inter", "sans-serif"],
-      },
       colors: {
         primary: themeConfig.colors.primary.main,
         secondary: themeConfig.colors.secondary.main,

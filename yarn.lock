@@ -5,30 +5,6 @@ __metadata:
   version: 8
   cacheKey: 10c0
 
-"@admin/system-design@workspace:*, @admin/system-design@workspace:packages/system-design":
-  version: 0.0.0-use.local
-  resolution: "@admin/system-design@workspace:packages/system-design"
-  dependencies:
-    "@mui/icons-material": "npm:7.1.0"
-    "@mui/material": "npm:7.1.0"
-    "@testing-library/jest-dom": "npm:6.6.4"
-    "@testing-library/react": "npm:16.3.0"
-    "@types/jest": "npm:^29.5.0"
-    "@types/react": "npm:19.1.3"
-    "@types/react-dom": "npm:19.1.3"
-    jest: "npm:^29.0.0"
-    jest-environment-jsdom: "npm:30.0.5"
-    react: "npm:19.1.0"
-    react-dom: "npm:19.1.0"
-    ts-jest: "npm:29.4.0"
-    ts-node: "npm:^10.9.2"
-    typescript: "npm:5.8.3"
-  peerDependencies:
-    react: ">=18.0.0"
-    react-dom: ">=18.0.0"
-  languageName: unknown
-  linkType: soft
-
 "@adobe/css-tools@npm:^4.4.0":
   version: 4.4.2
   resolution: "@adobe/css-tools@npm:4.4.2"
@@ -1602,6 +1578,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bashbag/system-design@workspace:*, @bashbag/system-design@workspace:packages/system-design":
+  version: 0.0.0-use.local
+  resolution: "@bashbag/system-design@workspace:packages/system-design"
+  dependencies:
+    "@hookform/resolvers": "npm:^5.2.1"
+    "@mui/icons-material": "npm:7.1.0"
+    "@mui/material": "npm:7.1.0"
+    "@testing-library/jest-dom": "npm:6.6.4"
+    "@testing-library/react": "npm:16.3.0"
+    "@types/jest": "npm:^29.5.0"
+    "@types/react": "npm:19.1.3"
+    "@types/react-dom": "npm:19.1.3"
+    jest: "npm:^29.0.0"
+    jest-environment-jsdom: "npm:30.0.5"
+    react: "npm:19.1.0"
+    react-dom: "npm:19.1.0"
+    react-hook-form: "npm:^7.56.4"
+    ts-jest: "npm:29.4.0"
+    ts-node: "npm:^10.9.2"
+    typescript: "npm:5.8.3"
+    zod: "npm:^4.0.14"
+  peerDependencies:
+    react: ">=18.0.0"
+    react-dom: ">=18.0.0"
+  languageName: unknown
+  linkType: soft
+
 "@bcoe/v8-coverage@npm:^0.2.3":
   version: 0.2.3
   resolution: "@bcoe/v8-coverage@npm:0.2.3"
@@ -2356,6 +2359,17 @@ __metadata:
   peerDependencies:
     react-hook-form: ^7.55.0
   checksum: 10c0/8260de1cd1b8b53629ea67555f3f027fdeabf4cd6da7f20cb76e646d353d998e61cf3a338d6313c94a31f32c23447403df5e584e5c8dddbca766ed7776513f8b
+  languageName: node
+  linkType: hard
+
+"@hookform/resolvers@npm:^5.2.1":
+  version: 5.2.1
+  resolution: "@hookform/resolvers@npm:5.2.1"
+  dependencies:
+    "@standard-schema/utils": "npm:^0.3.0"
+  peerDependencies:
+    react-hook-form: ^7.55.0
+  checksum: 10c0/e8e48abc188b5139bc444e4495e2fb1680c6aafa31d79c5d7fa4d7d690b0fc2bac1dfbd99213cbc0c6c53c5c3c4e8c4dc28278dd87a3fa0176540795a6f2edde
   languageName: node
   linkType: hard
 
@@ -14733,7 +14747,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "modernize-next-free@workspace:."
   dependencies:
-    "@admin/system-design": "workspace:*"
+    "@bashbag/system-design": "workspace:*"
     "@chromatic-com/storybook": "npm:^3"
     "@emotion/cache": "npm:11.14.0"
     "@emotion/react": "npm:11.14.0"
@@ -20538,5 +20552,12 @@ __metadata:
   version: 3.24.4
   resolution: "zod@npm:3.24.4"
   checksum: 10c0/ab3112f017562180a41a0f83d870b333677f7d6b77f106696c56894567051b91154714a088149d8387a4f50806a2520efcb666f108cd384a35c236a191186d91
+  languageName: node
+  linkType: hard
+
+"zod@npm:^4.0.14":
+  version: 4.0.14
+  resolution: "zod@npm:4.0.14"
+  checksum: 10c0/ec8681050d393f3be1c2c8f30d7dd4f56bec3746855fb17288be856185a0fe65e68d1b24aec657bbf956f64c05e69332d3751eafd6c103d19385bcc46075612b
   languageName: node
   linkType: hard

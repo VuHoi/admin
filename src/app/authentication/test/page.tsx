@@ -1,5 +1,5 @@
 import React from "react";
-import { Button } from "@admin/system-design";
+import { Button } from "@bashbag/system-design";
 const TestPage = () => {
   return (
     <div>

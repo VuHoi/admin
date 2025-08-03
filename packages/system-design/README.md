@@ -8,7 +8,7 @@ A comprehensive design system package for the admin dashboard, providing reusabl
 A customizable button component with support for different variants, sizes, shapes, and icons.
 
 ```tsx
-import { Button } from '@admin/system-design';
+import { Button } from '@bashbag/system-design';
 
 <Button variant="contained" size="md" color="primary">
   Click me
@@ -19,45 +19,41 @@ import { Button } from '@admin/system-design';
 A flexible input component with support for labels, error states, and icons.
 
 ```tsx
-import { Input } from '@admin/system-design';
+import { Input } from '@bashbag/system-design';
 
 <Input 
   label="Email"
   placeholder="Enter your email"
   onChange={(value) => console.log(value)}
 />
-```
 
 ### Password
 A password input component with show/hide functionality.
 
 ```tsx
-import { Password } from '@admin/system-design';
+import { Password } from '@bashbag/system-design';
 
 <Password 
   name="password"
   label="Password"
   onChange={(value) => console.log(value)}
 />
-```
 
 ### Text
 A text component for consistent typography.
 
 ```tsx
-import { Text } from '@admin/system-design';
+import { Text } from '@bashbag/system-design';
 
 <Text variant="h1">Heading</Text>
-```
 
 ### Icons
 A collection of custom icons.
 
 ```tsx
-import { EyeIcon } from '@admin/system-design';
+import { EyeIcon } from '@bashbag/system-design';
 
 <EyeIcon />
-```
 
 ## Development
 
@@ -86,8 +82,10 @@ yarn dev
 This package is designed to be used within the admin dashboard workspace. Components are exported from the main entry point:
 
 ```tsx
-import { Button, Input, Password, Text, EyeIcon } from '@admin/system-design';
+import { Button, Input, Password, Text, EyeIcon } from '@bashbag/system-design';
 ```
+
+**Note:** Form control components (InputFormControl, PasswordFormControl) are available for use with react-hook-form. Pass the form instance as a prop to these components.
 
 ## Testing
 
