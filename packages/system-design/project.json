@@ -45,13 +45,13 @@
       "executor": "@nx/storybook:storybook",
       "options": {
         "port": 6006,
-        "configDir": ".storybook"
+        "configDir": "packages/system-design/.storybook"
       }
     },
     "build-storybook": {
       "executor": "@nx/storybook:build-storybook",
       "options": {
-        "configDir": ".storybook",
+        "configDir": "packages/system-design/.storybook",
         "outputDir": "dist/storybook"
       }
     }

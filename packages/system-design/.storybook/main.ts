@@ -14,7 +14,6 @@ const config: StorybookConfig = {
   framework: {
     name: "@storybook/experimental-nextjs-vite",
     options: {},
-  },
-  staticDirs: ["../public"],
+  }
 };
 export default config; 
