@@ -1,33 +1,79 @@
 {
   "name": "vendor",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
-  "sourceRoot": "packages/vendor/src",
-  "projectType": "library",
+  "sourceRoot": "src",
+  "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/js:tsc",
+      "executor": "@nx/next:build",
       "outputs": ["{options.outputPath}"],
+      "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/packages/vendor",
-        "main": "packages/vendor/src/index.ts",
-        "tsConfig": "packages/vendor/tsconfig.json",
-        "assets": ["packages/vendor/*.md"]
+        "outputPath": ".next"
+      },
+      "configurations": {
+        "development": {
+          "outputPath": ".next"
+        },
+        "production": {
+          "outputPath": ".next"
+        }
       }
     },
     "serve": {
       "executor": "@nx/next:server",
       "defaultConfiguration": "development",
       "options": {
-        "buildTarget": "super-admin:build",
-        "dev": true
+        "buildTarget": "vendor:build",
+        "dev": true,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "vendor:build:development",
+          "dev": true,
+          "port": 4201
+        },
+        "production": {
+          "buildTarget": "vendor:build:production",
+          "dev": false,
+          "port": 4201
+        }
+      }
+    },
+    "start": {
+      "executor": "@nx/next:server",
+      "defaultConfiguration": "production",
+      "options": {
+        "buildTarget": "vendor:build",
+        "dev": false,
+        "port": 4201
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "vendor:build:development",
+          "dev": true,
+          "port": 4201
+        },
+        "production": {
+          "buildTarget": "vendor:build:production",
+          "dev": false,
+          "port": 4201
+        }
       }
     },
     "test": {
       "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/packages/vendor"],
       "options": {
-        "jestConfig": "packages/vendor/jest.config.ts",
+        "jestConfig": "jest.config.ts",
         "passWithNoTests": true
+      },
+      "configurations": {
+        "ci": {
+          "ci": true,
+          "codeCoverage": true
+        }
       }
     },
     "lint": {
@@ -35,5 +81,5 @@
       "outputs": ["{options.outputFile}"]
     }
   },
-  "tags": ["vendor", "library"]
+  "tags": ["vendor", "frontend", "application"]
 } 

@@ -1,4 +1,4 @@
-import { Controller, UseFormReturn } from "react-hook-form";
+import { UseFormReturn, Controller } from "react-hook-form";
 import { Input, InputProps } from "./input";
 
 interface InputFormControlProps {

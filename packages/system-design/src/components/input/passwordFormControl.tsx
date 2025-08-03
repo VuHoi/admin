@@ -1,4 +1,4 @@
-import { Controller, UseFormReturn } from "react-hook-form";
+import { UseFormReturn, Controller } from "react-hook-form";
 import { InputProps } from "./input";
 import { Password } from "./password";
 

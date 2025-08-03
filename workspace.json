@@ -8,16 +8,18 @@
       "targets": {
         "build": {
           "executor": "@nx/next:build",
-          "outputs": ["{options.outputPath}"],
+          "outputs": ["packages/super-admin/.next"],
           "defaultConfiguration": "production",
           "options": {
-            "outputPath": "dist/super-admin"
+            "outputPath": "packages/super-admin/.next"
           },
           "configurations": {
             "development": {
-              "outputPath": "dist/super-admin"
+              "outputPath": "packages/super-admin/.next"
             },
-            "production": {}
+            "production": {
+              "outputPath": "packages/super-admin/.next"
+            }
           }
         },
         "serve": {

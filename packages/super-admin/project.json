@@ -9,14 +9,14 @@
       "outputs": ["{options.outputPath}"],
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": "dist/super-admin"
+        "outputPath": ".next"
       },
       "configurations": {
         "development": {
-          "outputPath": "dist/super-admin"
+          "outputPath": ".next"
         },
         "production": {
-          "outputPath": "dist/super-admin"
+          "outputPath": ".next"
         }
       }
     },
