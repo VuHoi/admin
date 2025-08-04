@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Vendor } from '../types/vendor';
 import { formatVendorStatus, getStatusColor, formatDate } from '../utils/vendorUtils';

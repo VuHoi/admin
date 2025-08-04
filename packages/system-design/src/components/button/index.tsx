@@ -52,7 +52,7 @@ const Button: React.FC<React.PropsWithChildren<ButtonProps>> = ({
       }}
     >
       {leftIcon && <span className="text-xl mt-1">{leftIcon}</span>}
-      {children}
+      {children}aaa
       {rightIcon && <span className="text-xl mt-1">{rightIcon}</span>}
     </ButtonMui>
   );

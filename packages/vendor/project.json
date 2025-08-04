@@ -5,19 +5,15 @@
   "projectType": "application",
   "targets": {
     "build": {
-      "executor": "@nx/next:build",
-      "outputs": ["{options.outputPath}"],
+      "executor": "nx:run-commands",
       "defaultConfiguration": "production",
       "options": {
-        "outputPath": ".next"
+        "command": "next build",
+        "cwd": "packages/vendor"
       },
       "configurations": {
-        "development": {
-          "outputPath": ".next"
-        },
-        "production": {
-          "outputPath": ".next"
-        }
+        "development": {},
+        "production": {}
       }
     },
     "serve": {
@@ -26,39 +22,18 @@
       "options": {
         "buildTarget": "vendor:build",
         "dev": true,
-        "port": 4201
+        "port": 4200
       },
       "configurations": {
         "development": {
           "buildTarget": "vendor:build:development",
           "dev": true,
-          "port": 4201
+          "port": 4200
         },
         "production": {
           "buildTarget": "vendor:build:production",
           "dev": false,
-          "port": 4201
-        }
-      }
-    },
-    "start": {
-      "executor": "@nx/next:server",
-      "defaultConfiguration": "production",
-      "options": {
-        "buildTarget": "vendor:build",
-        "dev": false,
-        "port": 4201
-      },
-      "configurations": {
-        "development": {
-          "buildTarget": "vendor:build:development",
-          "dev": true,
-          "port": 4201
-        },
-        "production": {
-          "buildTarget": "vendor:build:production",
-          "dev": false,
-          "port": 4201
+          "port": 4200
         }
       }
     },

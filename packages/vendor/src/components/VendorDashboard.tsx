@@ -1,3 +1,5 @@
+'use client';
+
 import React, { useState } from 'react';
 import { Vendor } from '../types/vendor';
 import { calculateVendorAnalytics } from '../utils/vendorUtils';

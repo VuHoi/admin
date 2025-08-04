@@ -70,16 +70,21 @@
     "vendor": {
       "root": "packages/vendor",
       "sourceRoot": "packages/vendor/src",
-      "projectType": "library",
+      "projectType": "application",
       "targets": {
         "build": {
-          "executor": "@nx/js:tsc",
-          "outputs": ["{options.outputPath}"],
+          "executor": "@nx/next:build",
+          "outputs": ["packages/vendor/.next"],
           "options": {
-            "outputPath": "dist/packages/vendor",
-            "main": "packages/vendor/src/index.ts",
-            "tsConfig": "packages/vendor/tsconfig.json",
-            "assets": ["packages/vendor/*.md"]
+            "outputPath": "packages/vendor/.next"
+          },
+          "configurations": {
+            "development": {
+              "outputPath": "packages/vendor/.next"
+            },
+            "production": {
+              "outputPath": "packages/vendor/.next"
+            }
           }
         },
         "serve": {

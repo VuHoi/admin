@@ -1,6 +1,8 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // Disable static generation
+  output: 'standalone',
   webpack: (config) => {
     config.module.rules.push({
       test: /\.(ttf|woff|woff2|eot|otf)$/,

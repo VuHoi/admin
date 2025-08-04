@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { VendorAnalytics as VendorAnalyticsType } from '../types/vendor';
 import { formatCurrency } from '../utils/vendorUtils';
